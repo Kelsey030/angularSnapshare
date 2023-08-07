@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>sign in</title>
+	<!--<link rel="stylesheet" type="text/css" href="sign-in.css"> -->
+	<script type="text/javascript">
+    
+		// var passs = document.getElementById("pass").value;
+		// var conf_pass = document.getElementById("confirm").value;
+		
+
+		function validation() {
+
+var passs = document.getElementById("pass").value;
+var conf_pass = document.getElementById("confirm").value;
+
+//	console.log(passs);
+if(passs !== conf_pass){
+//		console.log('false');
+//				document.getElementById('errordisplay').style.color("red");
+
+    document.getElementById('errordisplay').innerHTML = '<p style="color:#190061;">Passwords do not match</p>';
+
+    document.getElementById('final').disabled = true;
+    
+
+}else{
+
+//	console.log('true');
+    document.getElementById('errordisplay').innerHTML = '<p style="color:#190061">password matches</p>';
+    document.getElementById('final').disabled = false;
+
+  
+}
+}
+
+function validate() {
+
+	
+
+    var mail = document.getElementById("pas").value;
+
+if(mail !== ""){  
+
+    alert("sign up successful");
+    window.location.replace("homepage.html")
+    return false;
+ }else{
+    alert("login failed");
+ }
+
+    
+}
+
+
+
+
+function valid(){
+var pass = document.getElementById("pass").value;
+
+if (pass.length < 8 ) {
+document.getElementById('errordisplay').innerHTML = '<p style="color:#190061;">password length must be at least 8 characters</p>';
+document.getElementById('final').disabled = true;
+}else{
+document.getElementById('errordisplay').innerHTML = '<p style="color:#190061"></p>';
+
+
+        document.getElementById('final').disabled = false;
+
+        
+
+
+}
+}
+
+
+
+
+
+</script>	
+
+
+</head>
+<body>
+    <div class="container">
+       
+	
+		<form id="form" action="database.php">
+            <h1>Sign up</h1>
+			
+			<div class="input-control">
+                <label for="username">Username</label>
+                <input id="username" name="Name" type="text" required>
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input name="Email" type="email" id="pas" required>
+                <div class="error"></div>
+            </div>
+
+			<div class="input-control">
+                <label for="password">Password</label>
+                <input id="pass" name="password" type="password" onkeyup="valid()" required>
+                <div class="error"></div>
+            </div>
+			
+			<div class="input-control">
+                <label for="password">Password Again</label>
+			<input type="Password" name="Confirm Password" id="confirm" onkeyup="validation()" required>
+            </div>
+			
+            <span id="errordisplay"></span><br>
+
+			<div>
+                <input id = "final" type="button" value="submit" class="button" id = "final" onclick="validate()">
+            </div>
+
+			
+		</form>
+    </div>
+</body>
+<html>
