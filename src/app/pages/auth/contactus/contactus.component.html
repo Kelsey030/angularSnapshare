@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		
+
+		body {
+    background-color:  #190061; ;
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    text-align: center;
+
+}
+	</style>
+</head>
+<body>
+
+    <h1>Contact us at SnapShare</h1>
+<p>
+	
+
+
+We love hearing from our community members at SnapShare, and we welcome any and all feedback, questions, or comments you may have. Whether you're experiencing technical difficulties or simply want to share your thoughts about our platform, our team is here to help.</p><br>
+
+<p>If you need assistance with your account, have a question about our features, or just want to say hello, please don't hesitate to contact us. Our customer support team is available to assist you 24/7. We strive to respond to all inquiries within 24 hours.</p><br>
+
+ 
+<p>We value your feedback and are constantly working to improve our platform. If you have any suggestions or ideas for how we can better serve our community, we'd love to hear them. Your input is essential in helping us create a platform that meets your needs and exceeds your expectations.</p><br>
+
+<p>Thank you for being a part of SnapShare. We're dedicated to providing you with the best possible experience, and we look forward to hearing from you soon.
+
+</p>
+
+<h3>Send us a message</h3>
+<label for="Message">Message:</label><br>
+<textarea name="Message" id="message" rows="12" cols="80" placeholder="I would like to say..."></textarea><br>
+
+ <input type="button" value="SUBMIT" id="button" style="background-color: white; width: 70px; height: 30px; float: center;" onclick="validate()" >
+
+
+
+	<p id="length"></p>
+
+	<script>
+		function validate() {
+			// body...
+		
+		var message= document.getElementById('message')
+		var length = document.getElementById('length')
+	
+	
+		if(message.value.length > 10){
+			alert("Message successfully sent");
+			window.location.replace("C:\Users\USER\Desktop\angular\snapshare\src\app\pages\auth\contactus2\contactus2.component.html")
+			return false;
+		  }
+		  else{
+			  alert("Message is too short.");
+		  }
+		   }
+	</script>
+	
+</body>
+</html>

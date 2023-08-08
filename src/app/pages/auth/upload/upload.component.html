@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Upload</title>
+<style>
+
+body{
+    background-color: #190061;
+}
+
+.file{
+    color: rgb(16, 16, 17)20, 20, 26;
+    margin-left: 300px;
+    font-size: 35px;
+    font-family: serif;
+}
+
+
+
+</style>
+
+
+</head>
+<body>
+    <h2>Upload Images</h2>
+    <div>
+    <form id="uploadForm">
+        <input type="file" id="imageInput" class="file" accept="image/*">
+        <button type="submit" style="color: #190061; width: 250px; height: 50px;">upload image</button>
+    </form>
+    <div>
+    <div id="previewContainer"></div>
+    <h1>upload images here</h1>
+
+
+    
+<script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-storage.js"></script>
+<script src="upload.js"></script>
+
+ <script>
+
+ document.getElementById('uploadForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    const imageInput = document.getElementById('imageInput');
+    const files = imageInput.files;
+
+    if (files.length === 0) {
+        alert('Please select an image.');
+        return;
+    }
+
+    const file = files[0];
+    if (!file.type.startsWith('image/')) {
+        alert('Please select an image file.');
+        return;
+    }
+
+    // You can handle the image upload to the server here.
+    // For demonstration purposes, we'll just show a preview of the selected image.
+    const reader = new FileReader();
+    reader.onload = function(event) {
+        const imagePreview = document.createElement('img');
+        imagePreview.src = event.target.result;
+        imagePreview.style.maxWidth = '500px'; // Set a maximum width for the preview
+        document.getElementById('previewContainer').appendChild(imagePreview);
+    };
+    reader.readAsDataURL(file);
+}); 
+</script>
+
+
+<script>
+   /*import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-storage.js";
+  //import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js"; */
+  
+
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDTs6BKABCLi1Fh3SVN32p5fGkWr1JX72Q",
+    authDomain: "snapshare030.firebaseapp.com",
+    databaseURL: "https://snapshare030-default-rtdb.firebaseio.com",
+    projectId: "snapshare030",
+    storageBucket: "snapshare030.appspot.com",
+    messagingSenderId: "534758164652",
+    appId: "1:534758164652:web:7784e020fd0965bb027709",
+    measurementId: "G-RRFWSB8TLV"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const storage = getStorage();
+  const storageRef = ref(storage);
+  
+
+  const analytics = getAnalytics(app);
+  
+
+
+</script> 
+  
+   
+
+

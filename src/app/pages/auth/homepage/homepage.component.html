@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SnapShare</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+<style>
+		body {
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    text-align: center;
+
+}
+
+h1{ color: #190061; 
+  margin-top: -40px;
+
+}
+
+header{text-align: right;
+       font-size: 35px;
+      color: black;
+      background-color:linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      margin: 10px;
+      padding: 10px;
+      position: relative;
+     
+}
+
+a{
+  padding: 30px;
+  color:  #190061;
+  
+
+}
+
+a:hover{
+color: #0C0032;
+}
+
+footer{
+  color: #190061;
+}
+
+
+img{width: 700px;
+
+}
+
+
+		*{
+           box-sizing: border-box;
+		}
+		.container{
+			width: 50%;
+			height: 25vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+      margin-left: -60px;
+      margin-bottom: 40px;
+      margin-top: 200px;
+		}
+		.swiper{
+			width: 52%;
+			height: fit-content;
+    
+		}
+		.swiper-slide img{
+			width: 100%;
+
+		}
+	
+	.div{ text-align:center; }
+
+a{
+  padding: 20px;
+}
+
+#intro{
+text-align: justify;
+width: 900px;
+margin-left: 600px;
+margin-top: -400px;
+height: -80px;
+margin-bottom: 100px;
+color: #190061;
+
+}
+	</style>
+  <link
+  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<header>
+	<a href="C:\Users\USER\Desktop\angular\snapshare\src\app\pages\auth\login\login.component.html">Login</a>
+	<a href="C:\Users\USER\Desktop\angular\snapshare\src\app\pages\auth\aboutus\aboutus.component.html">About us</a>
+	<a href="C:\Users\USER\Desktop\angular\snapshare\src\app\pages\auth\contactus\contactus.component.html">Contact us</a>
+  <hr>
+</header>
+
+
+<h1>SnapShare</h1>
+
+<!--the swiper should be pctures of the text on the side-->
+<!--should first contain a better logo-->
+
+
+<div class="container">
+  <!-- Slider main container -->
+<div class="swiper">
+<!-- Additional required wrapper -->
+<div class="swiper-wrapper">
+  <!-- Slides -->
+
+  <div class="swiper-slide"><img src="C:\Users\USER\Desktop\angular\snapshare\page pictures\snaplogo.png"></div>
+  <div class="swiper-slide"><img src="C:\Users\USER\Desktop\angular\snapshare\page pictures\Sharelogo.jpg"></div>
+  <div class="swiper-slide"><img src="C:\Users\USER\Desktop\angular\snapshare\page pictures\upload.png"></div>
+  <div class="swiper-slide"><img src="C:\Users\USER\Desktop\angular\snapshare\page pictures\inspired.png"></div>
+  <div class="swiper-slide"><img src="C:\Users\USER\Desktop\angular\snapshare\page pictures\perspective_1.jpg"></div>
+  <div class="swiper-slide"><img src="C:\Users\USER\Desktop\angular\snapshare\page pictures\explore.png"></div>
+  
+  
+</div>
+<!-- If we need pagination -->
+<div class="swiper-pagination"></div>
+
+<!-- If we need navigation buttons -->
+<div class="swiper-button-prev" style="color: #190061;"></div>
+<div class="swiper-button-next" style="color: #190061;"></div>
+
+
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+autoplay: {
+ delay:3000,
+ disableoninteraction: false
+},
+
+loop: true,
+
+// If we need pagination
+pagination: {
+  el: '.swiper-pagination',
+  clickable: true
+},
+
+// Navigation arrows
+navigation: {
+  nextEl: '.swiper-button-next',
+  prevEl: '.swiper-button-prev',
+},
+
+
+});
+</script>
+
+
+<div id="intro">
+<p>
+
+  "Capture and Share Your World: Join a vibrant community of photo enthusiasts and share your
+   best moments with the world. Discover new perspectives, get inspired, and showcase your
+    creativity through stunning visuals. With our user-friendly platform,
+     sharing your photos has never been easier. Start exploring and connecting today!"
+
+
+</p>
+
+
+
+</div>
+
+
+<hr>
+<footer>
+  <p>2023 - SnapShare - All Rights Reserved.</p>
+</footer>
+</body>
+</html>
