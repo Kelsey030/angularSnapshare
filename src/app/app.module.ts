@@ -12,6 +12,7 @@ import { Contactus2Component } from './pages/auth/contactus2/contactus2.componen
 import { Homepage2Component } from './pages/auth/homepage2/homepage2.component';
 import { SearchComponent } from './pages/auth/search/search.component';
 import { UploadComponent } from './pages/auth/upload/upload.component';
+import { Homepage3Component } from './pages/auth/homepage3/homepage3.component';
 
 
 
@@ -26,7 +27,8 @@ import { UploadComponent } from './pages/auth/upload/upload.component';
     Contactus2Component,
     Homepage2Component,
     SearchComponent,
-    UploadComponent
+    UploadComponent,
+    Homepage3Component
   ],
   imports: [
     BrowserModule,
